@@ -55,18 +55,6 @@
 
             tapping-term-ms = <300>;
         };
-
-        lt_td_lang: lt_td_lang {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_TD_LANG";
-            bindings = <&lt>, <&td_lang>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <280>;
-            flavor = "balanced";
-            retro-tap;
-            hold-trigger-on-release;
-        };
     };
 
     keymap {
@@ -75,9 +63,9 @@
         default_layer {
             bindings = <
 &kp Q                 &kp W         &kp E          &kp R             &kp T                                            &kp Y                  &kp U  &kp I      &kp O    &kp P
-&kp A                 &kp S         &kp D          &kp F             &kp G          &kp LS(LG(S))        &td_minus    &kp H                  &kp J  &kp K      &kp L    &kp SEMICOLON
-&kp Z                 &kp X         &kp C          &kp V             &kp B          &kp SQT              &td_bracket  &kp N                  &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&mt LEFT_SHIFT GRAVE  &kp LEFT_ALT  &mt LCTRL TAB  &mt LEFT_GUI ESC  &kp BACKSPACE  &lt_td_lang 1 0      &lt 2 ENTER  &mt RIGHT_SHIFT SPACE                             &kp NON_US_BACKSLASH
+&kp A                 &kp S         &kp D          &kp F             &kp G            &kp LS(LG(S))      &td_minus    &kp H                  &kp J  &kp K      &kp L    &kp SEMICOLON
+&kp Z                 &kp X         &kp C          &kp V             &kp B            &kp SQT            &td_bracket  &kp N                  &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&mt LEFT_SHIFT GRAVE  &kp LEFT_ALT  &mt LCTRL TAB  &mt LEFT_GUI ESC  &lt 1 BACKSPACE  &td_lang           &lt 2 ENTER  &mt RIGHT_SHIFT SPACE                             &kp NON_US_BACKSLASH
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -85,19 +73,19 @@
 
         NUM {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                            &trans  &kp N7  &kp N8  &kp N9  &trans
-&trans  &trans  &trans  &trans  &trans  &kp LC(LA(KP_NUMBER_0))      &trans       &trans  &kp N4  &kp N5  &kp N6  &trans
-&trans  &trans  &trans  &trans  &trans  &kp LC(LS(TAB))              &kp LC(TAB)  &trans  &kp N1  &kp N2  &kp N3  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                       &trans       &kp N0                          &trans
+&kp LG(BACKSPACE)  &kp LC(BACKSPACE)  &kp DELETE  &none      &none                                             &none   &kp N7  &kp N8  &kp N9  &none
+&none              &none              &none       &none      &none   &kp LC(LA(KP_NUMBER_0))      &none        &none   &kp N4  &kp N5  &kp N6  &none
+&kp LG(Z)          &kp LG(X)          &kp LG(C)   &kp LG(V)  &none   &kp LC(LS(TAB))              &kp LC(TAB)  &none   &kp N1  &kp N2  &kp N3  &none
+&kp LG(LS(Z))      &trans             &trans      &trans     &trans  &trans                       &trans       &kp N0                          &none
             >;
         };
 
         ARROW {
             bindings = <
 &kp EXCLAMATION  &kp AT   &kp HASH  &kp DOLLAR  &kp PERCENT                                    &kp CARET       &kp AMPERSAND   &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp F1           &kp F2   &kp F3    &kp F4      &kp F5       &trans               &trans       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW       &trans
-&kp F6           &kp F7   &kp F8    &kp F9      &kp F10      &kp LC(LS(TAB))      &kp LC(TAB)  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END               &trans
-&kp F11          &kp F12  &trans    &trans      &trans       &trans               &trans       &trans                                                              &trans
+&kp F1           &kp F2   &kp F3    &kp F4      &kp F5       &trans               &none        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW       &none
+&kp F6           &kp F7   &kp F8    &kp F9      &kp F10      &kp LC(LS(TAB))      &kp LC(TAB)  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END               &none
+&kp F11          &kp F12  &trans    &trans      &trans       &trans               &trans       &trans                                                              &none
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
