@@ -64,6 +64,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <250>;
+            flavor = "tap-unless-interrupted";
         };
     };
 
@@ -72,10 +73,10 @@
 
         default_layer {
             bindings = <
-&kp Q                 &kp W         &kp E          &kp R          &kp T                                               &kp Y                  &kp U  &kp I      &kp O    &kp P
-&kp A                 &kp S         &kp D          &kp F          &kp G             &kp LS(LG(S))        &td_minus    &kp H                  &kp J  &kp K      &kp L    &kp SEMICOLON
-&kp Z                 &kp X         &kp C          &kp V          &kp B             &kp SQT              &td_bracket  &kp N                  &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&mt LEFT_SHIFT GRAVE  &kp LEFT_ALT  &mt LCTRL TAB  &kp BACKSPACE  &mt LEFT_GUI ESC  &lt_td_lang 1 0      &lt 2 ENTER  &mt RIGHT_SHIFT SPACE                             &kp NON_US_BACKSLASH
+&kp Q                 &kp W         &kp E          &kp R             &kp T                                            &kp Y                  &kp U  &kp I      &kp O    &kp P
+&kp A                 &kp S         &kp D          &kp F             &kp G          &kp LS(LG(S))        &td_minus    &kp H                  &kp J  &kp K      &kp L    &kp SEMICOLON
+&kp Z                 &kp X         &kp C          &kp V             &kp B          &kp SQT              &td_bracket  &kp N                  &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&mt LEFT_SHIFT GRAVE  &kp LEFT_ALT  &mt LCTRL TAB  &mt LEFT_GUI ESC  &kp BACKSPACE  &lt_td_lang 1 0      &lt 2 ENTER  &mt RIGHT_SHIFT SPACE                             &kp NON_US_BACKSLASH
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
