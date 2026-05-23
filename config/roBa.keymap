@@ -54,7 +54,7 @@
             #binding-cells = <0>;
             bindings = <&kp LANGUAGE_2>, <&kp LANGUAGE_1>;
 
-            tapping-term-ms = <250>;
+            tapping-term-ms = <300>;
         };
 
         lt_td_lang: lt_td_lang {
@@ -65,7 +65,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <170>;
             flavor = "balanced";
-            quick-tap-ms = <150>;
             retro-tap;
             hold-trigger-on-release;
             require-prior-idle-ms = <100>;
