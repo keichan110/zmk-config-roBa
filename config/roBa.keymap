@@ -3,7 +3,6 @@
 #include <dt-bindings/zmk/pointing.h>
 
 &mt {
-    flavor = "tap-unless-interrupted";
     quick-tap-ms = <150>;
     tapping-term-ms = <220>;
     require-prior-idle-ms = <125>;
