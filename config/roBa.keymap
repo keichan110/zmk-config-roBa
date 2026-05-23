@@ -28,7 +28,24 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        l_click {
+            bindings = <&mkp MB1>;
+            key-positions = <18 19>;
+        };
+
+        m_click {
+            bindings = <&mkp MB3>;
+            key-positions = <19 31>;
+        };
+
+        r_click {
+            bindings = <&mkp MB2>;
+            key-positions = <20 21>;
+        };
+    };
 
     behaviors {
         td_bracket: td_bracket {
