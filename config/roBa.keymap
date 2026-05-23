@@ -2,6 +2,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 80 // ロータリーエンコーダのスクロール量（大きいほど速い）
+
 &mt {
     quick-tap-ms = <150>;
     tapping-term-ms = <220>;
@@ -48,6 +50,14 @@
     };
 
     behaviors {
+        encoder_msc_down_up: encoder_msc_down_up {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENCODER_MSC_DOWN_UP";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            tap-ms = <20>;
+        };
+
         td_bracket: td_bracket {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_BRACKET";
@@ -85,7 +95,7 @@
 &mt LEFT_SHIFT GRAVE  &kp LEFT_ALT  &mt LCTRL TAB  &mt LEFT_GUI ESC  &lt 1 BACKSPACE  &td_lang           &lt 2 ENTER  &mt RIGHT_SHIFT SPACE                             &kp NON_US_BACKSLASH
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         NUM {
