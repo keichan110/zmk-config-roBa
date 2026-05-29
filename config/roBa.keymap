@@ -64,31 +64,6 @@
 
             tap-ms = <20>;
         };
-
-        td_bracket: td_bracket {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_BRACKET";
-            #binding-cells = <0>;
-            tapping-term-ms = <250>;
-            bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
-        };
-
-        td_minus: td_minus {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_MINUS";
-            #binding-cells = <0>;
-            tapping-term-ms = <250>;
-            bindings = <&kp MINUS>, <&kp EQUAL>;
-        };
-
-        td_lang: td_lang {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_LANG";
-            #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_2>, <&kp LANGUAGE_1>;
-
-            tapping-term-ms = <300>;
-        };
     };
 
     keymap {
