@@ -121,9 +121,9 @@
 
         WORKSPACE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans            &kp LC(LEFT)          &trans          &kp LC(RIGHT)      &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LG(LA(LEFT))  &kp LA(LC(LG(DOWN)))  &kp LA(LG(UP))  &kp LA(LG(RIGHT))  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LS(LC(TAB))   &kp LC(TAB)           &trans          &trans             &trans
+&trans  &trans  &trans  &trans  &trans                      &trans            &kp LC(LEFT)      &trans          &kp LC(RIGHT)          &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LS(LC(LEFT))  &kp LS(LC(DOWN))  &kp LC(LS(UP))  &kp LG(LS(LC(RIGHT)))  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LS(LC(TAB))   &kp LC(TAB)       &trans          &trans                 &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                                     &trans
             >;
         };
